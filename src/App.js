@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+const FEEDS_KEY = process.env.REACT_APP_FEEDS_KEY;
+
 class App extends Component {
   constructor() {
     super();
@@ -8,6 +10,11 @@ class App extends Component {
       instagramData: null
     }
   }
+
+  componentDidMount() {
+    fetch("localhost:8080/feeds/" + FEEDS_KEY + "/all")
+  }
+
   render() {
     return (
       <div className="App">
