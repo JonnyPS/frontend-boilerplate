@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { GlobalNavigation } from "./components/basic-navigation.js"
 import { Loader } from "./components/loader.js"
+import { InstaFeedSummary } from "./components/insta-feed-summary.js"
 
 const FEEDS_KEY = process.env.REACT_APP_FEEDS_KEY;
 
@@ -28,14 +29,21 @@ class App extends Component {
   }
 
   render() {
+    let renderedView;
+    if ( this.state.dataLoaded === false ) {
+       renderedView = <Loader />
+    } else {
+      renderedView = <InstaFeedSummary dataStream={this.state} />
+    }
     return (
       <div className="App">
       <header className="">
         <GlobalNavigation />
       </header>
       <div>
-      <Loader loadedStatus={this.state.dataLoaded} />
-      <p>Hello all</p>
+        {renderedView}
+      
+      
       </div>
       </div>
     );
