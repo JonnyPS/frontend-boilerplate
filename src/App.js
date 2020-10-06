@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { GlobalNavigation } from "./components/basic-navigation.js"
+import { Loader } from "./components/loader.js"
 
 const FEEDS_KEY = process.env.REACT_APP_FEEDS_KEY;
 
@@ -8,6 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      dataLoaded: false,
       instagramData: null
     }
   }
@@ -17,6 +19,7 @@ class App extends Component {
     .then(response => response.json())  // convert to json
     .then((json) => {
       this.setState({
+        dataLoaded: true,
         instagramData: json // set state
       })
       console.log(this.state)
@@ -25,12 +28,15 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <div className="App">
-      <header className="App-header">
+      <header className="">
         <GlobalNavigation />
       </header>
+      <div>
+      <Loader loadedStatus={this.state.dataLoaded} />
+      <p>Hello all</p>
+      </div>
       </div>
     );
   }
