@@ -1,3 +1,6 @@
+# Frontend Boilerplate
+A frontend view built in React to connect with feeds from our other third party services
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
