@@ -5,17 +5,19 @@ export class InstaFeedSummary extends Component {
 
     console.log('props', this.props.dataStream.instagramData)
 
-    let results = this.props.dataStream.instagramData.map((item, index) => {  
-      return item.college
-        })
-
-    console.log('results', results)
+    let formatDate = ((data) => {
+      return data.toDateString()
+    })
 
     return (
-      <div className="grid-container-25">
+      <div className="grid-container-25 instagram-feed-container">
         <div className="grid-col-full-inner">
-          {results.map((item, index) => {
-            return <p key={index}>{item}</p>
+          {this.props.dataStream.instagramData.map((item, index) => {
+            return <div key={index}>
+              <span>Account: {item.college}</span>
+              <span>Last Updated At: {item.last_updated}</span>
+              <span>Status: {item.status === "ok" ? <span className="status-ok"></span> : <span className="status-error"></span>}</span>
+            </div>
           })}
         </div>
       </div>
