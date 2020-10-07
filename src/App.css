@@ -29,3 +29,9 @@
   display: inline-flex;
   width: 25%;
 }
+
+.instagram-thumbnail {
+  max-width: 70px;
+  max-height: 70px;
+  display: inline-block;
+}

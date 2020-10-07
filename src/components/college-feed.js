@@ -20,7 +20,6 @@ export function CollegeFeed(props) {
   return (
     <div className="grid-container-25">
       <div className="grid-col-full-inner">
-        {/* <pre>{JSON.stringify(col)}</pre> */}
         <JSONPretty id="json-pretty" data={col}></JSONPretty>
       </div>
     </div>
