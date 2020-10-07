@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import JSONPretty from 'react-json-pretty';
 
 export function CollegeFeed(props) {
+  document.body.classList.remove('dark--theme');
+
   // use params hook to get slug param
   let params = useParams();
   // display loader until data is loaded

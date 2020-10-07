@@ -20,7 +20,10 @@ class App extends Component {
     }
   }
 
+
   componentDidMount() {
+    document.body.classList.add('dark--theme');
+
     fetch("http://localhost:8080/feeds/"+FEEDS_KEY+"/all")
     .then(response => response.json())  // convert to json
     .then((json) => {
