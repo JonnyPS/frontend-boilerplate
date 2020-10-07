@@ -32,12 +32,15 @@ export class InstaFeedSummary extends Component {
                         <a href={`/feed/${item.college}`}>Click here for JSON preview</a>
                         
                       </p>
+                      <p>
+                        Latest Images:
+                      </p>
                       <ul className="instagram-image-thumbnail-list">
                         {this.props.data.instagramData[index].data !== null ? this.props.data.instagramData[index].data.map((item, index) => {
                           if ( index < 6 ) {
                             return <li key={index}><a href={item.media_url} target="_blank"><img src={item.media_url} className="instagram-thumbnail" /></a></li>
                           }
-                        }) : <p>No images are available</p>
+                        }) : <p><i>No images are available</i></p>
                         } 
                       </ul>
                       <p className="className-text">
