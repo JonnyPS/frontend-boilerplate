@@ -1,8 +1,8 @@
 import React from "react";
 import { Loader } from "./loader";
-import {
-  useParams
-} from "react-router-dom";
+import { useParams } from "react-router-dom";
+import JSONPretty from 'react-json-pretty';
+
 export function CollegeFeed(props) {
   // use params hook to get slug param
   let params = useParams();
@@ -18,6 +18,11 @@ export function CollegeFeed(props) {
   })
   // render data json obj as string
   return (
-    <pre>{JSON.stringify(col)}</pre>
+    <div className="grid-container-25">
+      <div className="grid-col-full-inner">
+        {/* <pre>{JSON.stringify(col)}</pre> */}
+        <JSONPretty id="json-pretty" data={col}></JSONPretty>
+      </div>
+    </div>
   )
 }
