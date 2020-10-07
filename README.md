@@ -1,6 +1,12 @@
 # Frontend Boilerplate
 A frontend view built in React to connect with feeds from our other third party services
 
+Get up and running:  
+Clone this repo  
+```yarn install```  
+Run instagram php app on ```localhost:8080```  
+```yarn start```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
