@@ -1,7 +1,7 @@
 # Frontend Boilerplate
 A frontend view built in React to connect with feeds from our other third party services
 
-Get up and running:  
+## Get up and running:  
 Clone this repo  
 ```yarn install```  
 Run instagram php app on ```localhost:8080```  
