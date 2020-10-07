@@ -27,11 +27,17 @@
 
 .instagram-feed-container .flex-col {
   display: inline-flex;
-  width: 25%;
+  width: 24%;
+  margin-bottom: 2vw;
+}
+
+.instagram-feed-container .flex-col:last-child {
+  width: 4%;
 }
 
 .instagram-thumbnail {
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 5px;
   display: inline-block;
 }
