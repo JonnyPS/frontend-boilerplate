@@ -9,7 +9,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: green;
+  background-color: #1AEB25;
 }
 
 .status-error {
@@ -17,14 +17,14 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #FF5000;
   animation: blinker 1.25s infinite;
 }
 
 @keyframes blinker {
   
   50% {
-    opacity: 0;
+    opacity: 0.1;
   }
 
   100% {
