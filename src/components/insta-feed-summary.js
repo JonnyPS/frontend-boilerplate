@@ -35,7 +35,8 @@ export class InstaFeedSummary extends Component {
                       if ( index < 6 ) {
                         return <img src={item.media_url} className="instagram-thumbnail" />
                       }
-                    }) : console.log('tis null') }
+                    }) : <p>No images are available</p>
+                    } 
                   </div>
                   <div className="flex-col"><a href={`/feed/${item.college}`}>JSON preview</a></div>
                   <div className="flex-col">{item.status === "ok" ? <span className="status-ok"></span> : <span className="status-error"></span>}</div>
