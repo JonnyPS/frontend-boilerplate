@@ -20,6 +20,12 @@
   background-color: red;
 }
 
-.instagram-feed-container span {
-  margin-right: 20px;
+.instagram-feed-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.instagram-feed-container .flex-col {
+  display: inline-flex;
+  width: 25%;
 }

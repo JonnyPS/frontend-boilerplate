@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import './App.css';
 import { GlobalNavigation } from "./components/basic-navigation.js"
 import { Loader } from "./components/loader.js"
 import { InstaFeedSummary } from "./components/insta-feed-summary.js"
+import { CollegeFeed } from "./components/college-feed.js"
+
+
 
 const FEEDS_KEY = process.env.REACT_APP_FEEDS_KEY;
 
@@ -40,11 +45,18 @@ class App extends Component {
       <header className="">
         <GlobalNavigation />
       </header>
-      <div>
-        {renderedView}
-      
-      
-      </div>
+        <main>
+          <BrowserRouter>
+            <Switch>
+                <Route path='/' exact render={(props) => (
+                  <InstaFeedSummary data={this.state} />
+                )} />
+                <Route path='/feed/:slug' render={(props) => (
+                  <CollegeFeed data={this.state} />
+                )} />
+            </Switch>
+          </BrowserRouter>
+        </main>
       </div>
     );
   }

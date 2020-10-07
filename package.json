@@ -34,6 +34,7 @@
   "devDependencies": {
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.31",
-    "react-moment": "^1.0.0"
+    "react-moment": "^1.0.0",
+    "react-router-dom": "^5.2.0"
   }
 }
