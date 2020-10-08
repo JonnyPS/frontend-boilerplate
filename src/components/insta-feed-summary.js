@@ -30,7 +30,8 @@ export class InstaFeedSummary extends Component {
                       </p>
                       <p>
                         <a href={`/feed/${item.college}`}>Click here for JSON preview</a>
-                        
+                        <br />
+                        <a href={`https://www.instagram.com/${item.college}`}>Click here live Instagram feed</a>
                       </p>
                       <p>
                         Latest Images:
