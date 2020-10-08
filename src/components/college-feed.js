@@ -20,10 +20,17 @@ export function CollegeFeed(props) {
   })
   // render data json obj as string
   return (
+    <>
+    <div className="grid-container-25">
+      <div className="grid-col-full-inner">
+        <p><a href="/">&lt;&lt; Back to dashboard</a></p>
+      </div>
+    </div>
     <div className="grid-container-25">
       <div className="grid-col-full-inner">
         <JSONPretty id="json-pretty" data={col}></JSONPretty>
       </div>
     </div>
+    </>
   )
 }
