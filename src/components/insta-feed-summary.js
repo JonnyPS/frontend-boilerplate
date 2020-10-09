@@ -13,6 +13,12 @@ export class InstaFeedSummary extends Component {
         <div className="grid-container-25 ">
           <div className="grid-col-full-inner card-grid-title">
             <h2 className="heading2">Instagram Feeds</h2>
+            <p style={{marginTop: 4 + "vw"}}>Here you can find a list of UAL Instagram feeds currently used on UAL's website.
+              <br />
+              Each list item below shows the account, a link to a JSON feed of the account, a link to the live Instagram account, the latest images from the account and a status signal displaying if everything is ok or not.
+              <br />
+              From here you can also reauthenticate each account if the feed appears to have gone down.
+            </p>
           </div>
         </div>
         <div className="grid-container-25">
@@ -22,7 +28,7 @@ export class InstaFeedSummary extends Component {
                 <li key={index} className="grid-col-md-1of2 grid-col-lg-1of3 grid-col-xl-1of4 card-article">
                   <div className="content">
                     <div className="card-text-container ">
-                      <h5 className="card-header">Account Name: <br />{item.college}</h5>
+                      <h5 className="card-header">{item.college}</h5>
                       <p className="card-text">
                         Last updated:
                         <br />
