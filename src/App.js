@@ -24,13 +24,13 @@ class App extends Component {
   componentDidMount() {
     document.body.classList.add('dark--theme');
 
-    fetch("http://localhost:8080/all")
+    fetch("https://api.arts.ac.uk/instagram/feeds/2EEYr9s0vlbyHO7OokJPD/all")
     // .then((response) => console.log(response))
     .then(response => response.json())  // convert to json
     .then((json) => {
       this.setState({
         dataLoaded: true,
-        instagramData: json.data // set state
+        instagramData: json // set state
       })
       console.log(this.state)
     })    
