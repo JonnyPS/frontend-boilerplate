@@ -11,7 +11,7 @@ export class InstaFeedSummary extends Component {
     return (
       <>
         <div className="grid-container-25 ">
-          <div className="grid-col-full-inner card-grid-title">
+          <div className="grid-col-lg-1of2 card-grid-title">
             <h2 className="heading2">Instagram Feeds</h2>
             <p style={{marginTop: 4 + "vw"}}>Here you can find a list of UAL Instagram feeds currently used on UAL's website.
               <br />
