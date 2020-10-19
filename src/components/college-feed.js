@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import JSONPretty from 'react-json-pretty';
 
 export function CollegeFeed(props) {
+  document.body.classList.remove('dark--theme');
+
   // use params hook to get slug param
   let params = useParams();
   // display loader until data is loaded
@@ -18,10 +20,17 @@ export function CollegeFeed(props) {
   })
   // render data json obj as string
   return (
+    <>
+    <div className="grid-container-25">
+      <div className="grid-col-full-inner">
+        <p><a href="/">&lt;&lt; Back to dashboard</a></p>
+      </div>
+    </div>
     <div className="grid-container-25">
       <div className="grid-col-full-inner">
         <JSONPretty id="json-pretty" data={col}></JSONPretty>
       </div>
     </div>
+    </>
   )
 }
