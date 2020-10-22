@@ -6,6 +6,7 @@ import { GlobalNavigation } from "./components/basic-navigation.js"
 import { Loader } from "./components/loader.js"
 import { InstaFeedSummary } from "./components/insta-feed-summary.js"
 import { CollegeFeed } from "./components/college-feed.js"
+import { Search } from "./components/Search.js"
 
 
 
@@ -50,6 +51,7 @@ class App extends Component {
         <GlobalNavigation />
       </header>
         <main>
+          <Search />
           <BrowserRouter>
             <Switch>
                 <Route path='/' exact render={(props) => (
