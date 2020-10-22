@@ -51,7 +51,6 @@ class App extends Component {
         <GlobalNavigation />
       </header>
         <main>
-          <Search />
           <BrowserRouter>
             <Switch>
                 <Route path='/' exact render={(props) => (
