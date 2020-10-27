@@ -9,7 +9,6 @@ import { CollegeFeed } from "./components/college-feed.js"
 import { Search } from "./components/Search.js"
 
 
-
 const FEEDS_KEY = process.env.REACT_APP_FEEDS_KEY;
 
 class App extends Component {
@@ -51,12 +50,12 @@ class App extends Component {
         <GlobalNavigation />
       </header>
         <main>
-          <BrowserRouter>
+          <BrowserRouter basename="/build">
             <Switch>
                 <Route path='/' exact render={(props) => (
                   <InstaFeedSummary data={this.state} />
                 )} />
-                <Route path='/feed/:slug' render={(props) => (
+                <Route path='/feed/:slug' exact render={(props) => (
                   <CollegeFeed data={this.state} />
                 )} />
             </Switch>
