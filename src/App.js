@@ -50,7 +50,7 @@ class App extends Component {
         <GlobalNavigation />
       </header>
         <main>
-          <BrowserRouter basename="/build">
+          <BrowserRouter basename="/dashboard">
             <Switch>
                 <Route path='/' exact render={(props) => (
                   <InstaFeedSummary data={this.state} />

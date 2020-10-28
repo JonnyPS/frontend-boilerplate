@@ -23,7 +23,7 @@ export function CollegeFeed(props) {
     <>
     <div className="grid-container-25">
       <div className="grid-col-full-inner">
-        <p><a href="/build/">&lt;&lt; Back to dashboard</a></p>
+        <p><a href="/dashboard/">&lt;&lt; Back to dashboard</a></p>
       </div>
     </div>
     <div className="grid-container-25">
