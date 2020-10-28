@@ -1,6 +1,6 @@
 <?php
 
-require "../vendor/autoload.php";
+require "vendor/autoload.php";
 
 // Use classes
 use Bramus\Router\Router;
@@ -10,7 +10,7 @@ $router = new Router();
 
 // Define routes
 $router->get('/.*', function () {
-    include "index.html";
+    include "build/index.html";
     die();
 });
 
