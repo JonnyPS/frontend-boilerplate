@@ -28,10 +28,14 @@ export class HomepageWidgets extends Component {
 								<div className="card-text-container ">
 									<h5 className="card-header">Instagram Feeds</h5>
 										<p className="card-text">
-											<span>
+											<span
+												style={this.filt().length === 0 ? {color:"white"} : {color:"white"}}>
 												{this.props.data.instagramData.length - this.filt().length }
 											</span> 
-											&nbsp;/&nbsp;{this.props.data.instagramData.length} feeds are currently active.
+											&nbsp;/&nbsp;
+											<span style={{color:"white"}}>
+												{this.props.data.instagramData.length}
+											</span> feeds are currently active.
 										</p>
 										<button id="Button-default" className="btn tiny cta">
 											<a href="/instagram" style={{color:"black"}}>Click here to view feeds
