@@ -69,3 +69,7 @@
   margin-right: 5px;
   display: inline-block;
 }
+
+pre {
+	font-size: 13px;
+}
