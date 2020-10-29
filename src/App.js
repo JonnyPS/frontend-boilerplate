@@ -56,10 +56,10 @@ class App extends Component {
 								<Route path="/" exact render={(props) => (
                   <HomepageWidgets data={this.state} />
                 )} />
-                <Route path='/instagram' render={(props) => (
+                <Route path='/instagram' exact render={(props) => (
                   <InstaFeedSummary data={this.state} />
                 )} />
-                <Route path='/feed/:slug' exact render={(props) => (
+                <Route path='/instagram/feed/:slug' render={(props) => (
                   <CollegeFeed data={this.state} />
                 )} />
             </Switch>

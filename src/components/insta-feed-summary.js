@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Moment from 'react-moment';
 import 'moment-timezone';
 import { Loader } from "./loader";
+import { HomeBreadcrumb } from "./HomeBreadcrumb";
 
 export class InstaFeedSummary extends Component {
   render() {
@@ -10,6 +11,7 @@ export class InstaFeedSummary extends Component {
     } 
     return (
       <>
+				<HomeBreadcrumb />
         <div className="grid-container-25 ">
           <div className="grid-col-lg-1of2 card-grid-title">
             <h2 className="heading2">Instagram Feeds</h2>
@@ -35,7 +37,7 @@ export class InstaFeedSummary extends Component {
                         {<Moment format="Do MMMM YYYY HH:MMa">{item.last_updated}</Moment>}
                       </p>
                       <p>
-                        <a href={`/dashboard/feed/${item.college}`}>Click here for JSON preview</a>
+                        <a href={`/dashboard/instagram/feed/${item.college}`}>Click here for JSON preview</a>
                         <br />
                         <a href={`https://www.instagram.com/${item.college}`}>Click here live Instagram feed</a>
                       </p>
