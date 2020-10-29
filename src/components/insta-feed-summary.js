@@ -35,7 +35,7 @@ export class InstaFeedSummary extends Component {
                         {<Moment format="Do MMMM YYYY HH:MMa">{item.last_updated}</Moment>}
                       </p>
                       <p>
-                        <a href={`/feed/${item.college}`}>Click here for JSON preview</a>
+                        <a href={`/dashboard/feed/${item.college}`}>Click here for JSON preview</a>
                         <br />
                         <a href={`https://www.instagram.com/${item.college}`}>Click here live Instagram feed</a>
                       </p>

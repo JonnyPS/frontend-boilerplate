@@ -6,7 +6,7 @@ import { GlobalNavigation } from "./components/basic-navigation.js"
 import { Loader } from "./components/loader.js"
 import { InstaFeedSummary } from "./components/insta-feed-summary.js"
 import { CollegeFeed } from "./components/college-feed.js"
-
+import { Search } from "./components/Search.js"
 
 
 const FEEDS_KEY = process.env.REACT_APP_FEEDS_KEY;
@@ -24,13 +24,13 @@ class App extends Component {
   componentDidMount() {
     document.body.classList.add('dark--theme');
 
-    fetch("http://localhost:8080/all")
+    fetch("https://api.arts.ac.uk/instagram/feeds/2EEYr9s0vlbyHO7OokJPD/all")
     // .then((response) => console.log(response))
     .then(response => response.json())  // convert to json
     .then((json) => {
       this.setState({
         dataLoaded: true,
-        instagramData: json.data // set state
+        instagramData: json // set state
       })
       console.log(this.state)
     })    
@@ -50,12 +50,12 @@ class App extends Component {
         <GlobalNavigation />
       </header>
         <main>
-          <BrowserRouter>
+          <BrowserRouter basename="/dashboard">
             <Switch>
                 <Route path='/' exact render={(props) => (
                   <InstaFeedSummary data={this.state} />
                 )} />
-                <Route path='/feed/:slug' render={(props) => (
+                <Route path='/feed/:slug' exact render={(props) => (
                   <CollegeFeed data={this.state} />
                 )} />
             </Switch>
