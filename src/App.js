@@ -6,6 +6,7 @@ import { GlobalNavigation } from "./components/basic-navigation.js"
 import { Loader } from "./components/loader.js"
 import { InstaFeedSummary } from "./components/insta-feed-summary.js"
 import { CollegeFeed } from "./components/college-feed.js"
+import { HomepageWidgets } from "./components/HomepageWidgets.js"
 import { Search } from "./components/Search.js"
 
 
@@ -52,7 +53,10 @@ class App extends Component {
         <main>
           <BrowserRouter basename="/dashboard">
             <Switch>
-                <Route path='/' exact render={(props) => (
+								<Route path="/" exact render={(props) => (
+                  <HomepageWidgets data={this.state} />
+                )} />
+                <Route path='/instagram' render={(props) => (
                   <InstaFeedSummary data={this.state} />
                 )} />
                 <Route path='/feed/:slug' exact render={(props) => (
