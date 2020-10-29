@@ -52,7 +52,7 @@ export class InstaFeedSummary extends Component {
                       </ul>
                       <p className="className-text">
                         <span>
-                          {item.status === "ok" ? <span className="status-ok"></span> : <span className="status-error"></span>}
+                          {item.status === "ok" ? <span className="status-ok"></span> : <span><span className="status-error"></span><span style={{marginLeft: "16px"}}><a href={item.auth_link} className="arrow-right">Click here to reauthenticate</a></span></span>}
                         </span>
                       </p>
                     </div>
