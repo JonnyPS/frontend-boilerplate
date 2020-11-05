@@ -34,7 +34,7 @@ export class InstaFeedSummary extends Component {
                       <p className="card-text">
                         Last updated:
                         <br />
-                        {<Moment format="Do MMMM YYYY HH:MMa">{item.last_updated}</Moment>}
+                        {<Moment format="D MMMM YYYY HH:MMa">{item.last_updated}</Moment>}
                       </p>
                       <p>
                         <a href={`/dashboard/instagram/feed/${item.college}`}>Click here for JSON preview</a>
