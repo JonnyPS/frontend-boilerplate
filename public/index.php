@@ -10,7 +10,7 @@ $router = new Router();
 
 // Define routes
 $router->get('/.*', function () {
-    include "build/index.html";
+    include "index.html";
     die();
 });
 
